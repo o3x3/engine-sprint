@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+
+  "world": {
+    "id": "world_ocean_01",
+    "name": "Deep Ocean",
+    "gravity": [0, -4.5, 0]
+  },
+
+  "scene": {
+    "id": "ocean_scene",
+    "ambientLight": [0.3, 0.5, 0.8],
+    "skybox": "ocean_sky"
+  },
+
+  "entities": [
+    {
+      "id": "player_1",
+      "type": "player",
+
+      "transform": {
+        "position": [0, -5, 0],
+        "rotation": [0, 0, 0],
+        "scale": [1, 1, 1]
+      },
+
+      "material": {
+        "shader": "standard",
+        "texture": "player_diver",
+        "color": [1, 1, 1]
+      },
+
+      "components": {
+        "mesh": "player",
+        "collider": "box",
+        "script": "player_controller"
+      }
+    },
+
+    {
+      "id": "shark_1",
+      "type": "npc",
+
+      "transform": {
+        "position": [10, -8, 5],
+        "rotation": [0, 180, 0],
+        "scale": [2, 2, 2]
+      },
+
+      "material": {
+        "shader": "standard",
+        "texture": "shark_skin",
+        "color": [1, 1, 1]
+      },
+
+      "components": {
+        "mesh": "shark",
+        "collider": "box",
+        "script": "hostile_ai"
+      }
+    }
+  ],
+
+  "quests": [
+    {
+      "id": "quest_ocean_explorer",
+      "triggerEntity": "shark_1",
+      "goal": "defeat"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+
+  "world": {
+    "id": "world_volcano_01",
+    "name": "Volcanic Crater",
+    "gravity": [0, -9.8, 0]
+  },
+
+  "scene": {
+    "id": "volcano_scene",
+    "ambientLight": [1.0, 0.3, 0.2],
+    "skybox": "volcano_sky"
+  },
+
+  "entities": [
+    {
+      "id": "player_1",
+      "type": "player",
+
+      "transform": {
+        "position": [0, 2, 0],
+        "rotation": [0, 0, 0],
+        "scale": [1, 1, 1]
+      },
+
+      "material": {
+        "shader": "standard",
+        "texture": "player_fire_armor",
+        "color": [1, 1, 1]
+      },
+
+      "components": {
+        "mesh": "player",
+        "collider": "box",
+        "script": "player_controller"
+      }
+    },
+
+    {
+      "id": "fire_elemental_1",
+      "type": "npc",
+
+      "transform": {
+        "position": [-6, 1, -4],
+        "rotation": [0, 45, 0],
+        "scale": [1.5, 1.5, 1.5]
+      },
+
+      "material": {
+        "shader": "emissive",
+        "texture": "fire_elemental",
+        "color": [1, 0.5, 0]
+      },
+
+      "components": {
+        "mesh": "elemental",
+        "collider": "sphere",
+        "script": "hostile_ai"
+      }
+    }
+  ],
+
+  "quests": [
+    {
+      "id": "quest_volcano_challenge",
+      "triggerEntity": "fire_elemental_1",
+      "goal": "defeat"
+    }
+  ]
+}

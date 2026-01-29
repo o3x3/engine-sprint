@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+
+  "world": {
+    "id": "world_desert_01",
+    "name": "Scorching Desert",
+    "gravity": [0, -9.8, 0]
+  },
+
+  "scene": {
+    "id": "desert_scene",
+    "ambientLight": [1.0, 0.9, 0.7],
+    "skybox": "desert_sky"
+  },
+
+  "entities": [
+    {
+      "id": "player_1",
+      "type": "player",
+
+      "transform": {
+        "position": [0, 0, 0],
+        "rotation": [0, 0, 0],
+        "scale": [1, 1, 1]
+      },
+
+      "material": {
+        "shader": "standard",
+        "texture": "player_desert",
+        "color": [1, 1, 1]
+      },
+
+      "components": {
+        "mesh": "player",
+        "collider": "box",
+        "script": "player_controller"
+      }
+    },
+
+    {
+      "id": "scorpion_1",
+      "type": "npc",
+
+      "transform": {
+        "position": [8, 0, 2],
+        "rotation": [0, 90, 0],
+        "scale": [1.2, 1.2, 1.2]
+      },
+
+      "material": {
+        "shader": "standard",
+        "texture": "scorpion_shell",
+        "color": [1, 1, 1]
+      },
+
+      "components": {
+        "mesh": "scorpion",
+        "collider": "box",
+        "script": "hostile_ai"
+      }
+    }
+  ],
+
+  "quests": [
+    {
+      "id": "quest_survive_desert",
+      "triggerEntity": "scorpion_1",
+      "goal": "defeat"
+    }
+  ]
+}

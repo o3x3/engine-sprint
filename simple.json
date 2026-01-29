@@ -1,0 +1,71 @@
+{
+  "world": {
+    "id": "w_simple",
+    "name": "Simple Floor Test",
+    "gravity": [0, -9.8, 0]
+  },
+  "scene": {
+    "id": "s_01",
+    "ambientLight": [0.8, 0.8, 0.8],
+    "skybox": "none"
+  },
+  "entities": [
+    {
+      "id": "floor",
+      "type": "object",
+      "transform": { 
+        "position": [0, -1, 0], 
+        "rotation": [0, 0, 0], 
+        "scale": [10, 0.1, 10] 
+      },
+      "material": { 
+        "shader": "default", 
+        "texture": "none", 
+        "color": [0.5, 0.5, 0.5] 
+      },
+      "components": { 
+        "mesh": "assets/cube.txt", 
+        "collider": "box", 
+        "script": "none" 
+      }
+    },
+    {
+      "id": "cube_left",
+      "type": "object",
+      "transform": { 
+        "position": [-2, 0, 0], 
+        "rotation": [0, 45, 0], 
+        "scale": [1, 1, 1] 
+      },
+      "material": { 
+        "shader": "default", 
+        "texture": "none", 
+        "color": [1.0, 0.0, 0.0] 
+      },
+      "components": { 
+        "mesh": "assets/cube.txt", 
+        "collider": "box", 
+        "script": "none" 
+      }
+    },
+    {
+      "id": "cube_right",
+      "type": "object",
+      "transform": { 
+        "position": [2, 0, 0], 
+        "rotation": [0, 0, 0], 
+        "scale": [1, 1, 1] 
+      },
+      "material": { 
+        "shader": "default", 
+        "texture": "none", 
+        "color": [0.0, 0.0, 1.0] 
+      },
+      "components": { 
+        "mesh": "assets/cube.txt", 
+        "collider": "box", 
+        "script": "none" 
+      }
+    }
+  ]
+}

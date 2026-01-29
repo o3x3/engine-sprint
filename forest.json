@@ -1,0 +1,72 @@
+{
+    "schema_version": "1.0",
+  
+    "world": {
+      "id": "world_forest_01",
+      "name": "Dark Forest",
+      "gravity": [0, -9.8, 0]
+    },
+  
+    "scene": {
+      "id": "forest_scene",
+      "ambientLight": [0.4, 0.6, 0.4],
+      "skybox": "forest_sky"
+    },
+  
+    "entities": [
+      {
+        "id": "player_1",
+        "type": "player",
+  
+        "transform": {
+          "position": [0, 0, 0],
+          "rotation": [0, 0, 0],
+          "scale": [1, 1, 1]
+        },
+  
+        "material": {
+          "shader": "standard",
+          "texture": "player_armor",
+          "color": [1, 1, 1]
+        },
+  
+        "components": {
+          "mesh": "player",
+          "collider": "box",
+          "script": "player_controller"
+        }
+      },
+  
+      {
+        "id": "wolf_1",
+        "type": "npc",
+  
+        "transform": {
+          "position": [5, 0, -3],
+          "rotation": [0, 0, 0],
+          "scale": [1, 1, 1]
+        },
+  
+        "material": {
+          "shader": "standard",
+          "texture": "wolf_fur",
+          "color": [1, 1, 1]
+        },
+  
+        "components": {
+          "mesh": "wolf",
+          "collider": "box",
+          "script": "hostile_ai"
+        }
+      }
+    ],
+  
+    "quests": [
+      {
+        "id": "quest_defeat_wolf",
+        "triggerEntity": "wolf_1",
+        "goal": "defeat"
+      }
+    ]
+  }
+  

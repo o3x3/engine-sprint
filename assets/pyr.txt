@@ -1,0 +1,35 @@
+# A simple square-based pyramid
+# Coordinates are corrected for Y-Up (XZ plane)
+
+# List of vertices (x, y, z coordinates)
+v -0.5 0.0 0.5
+v 0.5 0.0 0.5
+v 0.5 0.0 -0.5
+v -0.5 0.0 -0.5
+v 0.0 1.0 0.0  # Apex of the pyramid (at y=1)
+
+# Texture Coords (can be simple)
+vt 0.0 0.0
+vt 1.0 0.0
+vt 1.0 1.0
+vt 0.0 1.0
+vt 0.5 0.5
+
+# Normals (simplified)
+vn 0.0 1.0 0.0  # Up
+vn 0.0 -1.0 0.0 # Down
+vn 0.0 0.707 0.707
+vn 0.707 0.707 0.0
+vn 0.0 0.707 -0.707
+vn -0.707 0.707 0.0
+
+# List of faces
+# Base (square on XZ plane)
+f 1/1/2 3/3/2 2/2/2
+f 1/1/2 4/4/2 3/3/2
+
+# Sides (triangles)
+f 1/1/6 2/2/6 5/5/6
+f 2/2/4 3/3/4 5/5/4
+f 3/3/5 4/4/5 5/5/5
+f 4/4/3 1/1/3 5/5/3

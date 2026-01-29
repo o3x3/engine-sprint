@@ -1,0 +1,32 @@
+@echo off
+title TTG DEMO LAUNCHER
+
+:: 1. Start the Server silently (minimized)
+echo [LAUNCHER] Booting  AI Control Plane...
+start /min cmd /c "python mock_server.py"
+
+:: 2. Wait for server to warm up
+echo [LAUNCHER] Syncing...
+timeout /t 2 >nul
+
+:: 3. Launch Engine in DEMO MODE
+echo [LAUNCHER] Starting Engine Runtime...
+
+:: Check for Release build first (preferred for demos)
+if exist "x64\Release\sprint.exe" (
+    start "" "x64\Release\sprint.exe" --demo
+) else if exist "x64\Debug\sprint.exe" (
+    start "" "x64\Debug\sprint.exe" --demo
+) else (
+    echo [ERROR] Could not find sprint.exe! Build your project first.
+    pause
+    exit
+)
+
+:: 4. Cleanup when done
+echo [LAUNCHER] Demo Running. Press any key to kill all processes.
+pause >nul
+
+taskkill /IM sprint.exe /F >nul 2>&1
+taskkill /IM python.exe /F >nul 2>&1
+echo [LAUNCHER] Shutdown Complete.

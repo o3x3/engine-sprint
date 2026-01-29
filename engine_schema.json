@@ -1,0 +1,47 @@
+{
+    "world": {
+      "id": "string",
+      "name": "string",
+      "gravity": [0, -9.8, 0]
+    },
+  
+    "scene": {
+      "id": "string",
+      "ambientLight": [1, 1, 1],
+      "skybox": "string"
+    },
+  
+    "entities": [
+      {
+        "id": "string",
+        "type": "player|npc|object",
+  
+        "transform": {
+          "position": [0, 0, 0],
+          "rotation": [0, 0, 0],
+          "scale": [1, 1, 1]
+        },
+  
+        "material": {
+          "shader": "string",
+          "texture": "string",
+          "color": [1, 1, 1]
+        },
+  
+        "components": {
+          "mesh": "string",
+          "collider": "box|sphere|none",
+          "script": "string"
+        }
+      }
+    ],
+  
+    "quests": [
+      {
+        "id": "string",
+        "triggerEntity": "string",
+        "goal": "string"
+      }
+    ]
+  }
+  

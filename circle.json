@@ -1,0 +1,22 @@
+{
+  "world": {
+    "id": "w_circle",
+    "name": "Circular Formation",
+    "gravity": [0, 0, 0]
+  },
+  "scene": {
+    "id": "s_02",
+    "ambientLight": [0.2, 0.2, 0.3],
+    "skybox": "none"
+  },
+  "entities": [
+    { "id": "s1", "type": "object", "transform": { "position": [4, 0, 0], "rotation": [0,0,0], "scale": [1,1,1] }, "material": { "shader": "default", "texture": "none", "color": [1,1,0] }, "components": { "mesh": "assets/sphere.txt", "collider": "none", "script": "none" } },
+    { "id": "s2", "type": "object", "transform": { "position": [2.8, 0, 2.8], "rotation": [0,0,0], "scale": [1,1,1] }, "material": { "shader": "default", "texture": "none", "color": [1,0.8,0] }, "components": { "mesh": "assets/sphere.txt", "collider": "none", "script": "none" } },
+    { "id": "s3", "type": "object", "transform": { "position": [0, 0, 4], "rotation": [0,0,0], "scale": [1,1,1] }, "material": { "shader": "default", "texture": "none", "color": [1,0.6,0] }, "components": { "mesh": "assets/sphere.txt", "collider": "none", "script": "none" } },
+    { "id": "s4", "type": "object", "transform": { "position": [-2.8, 0, 2.8], "rotation": [0,0,0], "scale": [1,1,1] }, "material": { "shader": "default", "texture": "none", "color": [1,0.4,0] }, "components": { "mesh": "assets/sphere.txt", "collider": "none", "script": "none" } },
+    { "id": "s5", "type": "object", "transform": { "position": [-4, 0, 0], "rotation": [0,0,0], "scale": [1,1,1] }, "material": { "shader": "default", "texture": "none", "color": [1,0.2,0] }, "components": { "mesh": "assets/sphere.txt", "collider": "none", "script": "none" } },
+    { "id": "s6", "type": "object", "transform": { "position": [-2.8, 0, -2.8], "rotation": [0,0,0], "scale": [1,1,1] }, "material": { "shader": "default", "texture": "none", "color": [1,0,0] }, "components": { "mesh": "assets/sphere.txt", "collider": "none", "script": "none" } },
+    { "id": "s7", "type": "object", "transform": { "position": [0, 0, -4], "rotation": [0,0,0], "scale": [1,1,1] }, "material": { "shader": "default", "texture": "none", "color": [0.8,0,0.2] }, "components": { "mesh": "assets/sphere.txt", "collider": "none", "script": "none" } },
+    { "id": "s8", "type": "object", "transform": { "position": [2.8, 0, -2.8], "rotation": [0,0,0], "scale": [1,1,1] }, "material": { "shader": "default", "texture": "none", "color": [0.6,0,0.4] }, "components": { "mesh": "assets/sphere.txt", "collider": "none", "script": "none" } }
+  ]
+}

@@ -1,0 +1,197 @@
+[
+    {
+        "jobType": "BUILD_SCENE",
+        "payload": {
+            "ambientLight": [
+                0.8,
+                0.2,
+                0.2
+            ],
+            "sceneId": "scene_net_test",
+            "skybox": "none"
+        }
+    },
+    {
+        "jobType": "SPAWN_ENTITIES",
+        "payload": {
+            "components": {
+                "collider": "box",
+                "mesh": "cube",
+                "script": "none"
+            },
+            "id": "net_cube_01",
+            "material": {
+                "color": [
+                    0,
+                    1,
+                    0
+                ],
+                "shader": "standard",
+                "texture": "none"
+            },
+            "transform": {
+                "position": [
+                    0,
+                    0,
+                    -5
+                ],
+                "rotation": [
+                    0,
+                    45,
+                    0
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "type": "object"
+        }
+    },
+    {
+        "jobType": "UPDATE",
+        "payload": {
+            "id": "net_cube_01",
+            "position": [
+                2,
+                0,
+                -5
+            ]
+        }
+    },
+    {
+        "jobType": "BUILD_SCENE",
+        "payload": {
+            "ambientLight": [
+                0.8,
+                0.2,
+                0.2
+            ],
+            "sceneId": "scene_net_test",
+            "skybox": "none"
+        }
+    },
+    {
+        "jobType": "SPAWN_ENTITIES",
+        "payload": {
+            "components": {
+                "collider": "box",
+                "mesh": "cube",
+                "script": "none"
+            },
+            "id": "net_cube_01",
+            "material": {
+                "color": [
+                    0,
+                    1,
+                    0
+                ],
+                "shader": "standard",
+                "texture": "none"
+            },
+            "transform": {
+                "position": [
+                    0,
+                    0,
+                    -5
+                ],
+                "rotation": [
+                    0,
+                    45,
+                    0
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "type": "object"
+        }
+    },
+    {
+        "jobType": "UPDATE",
+        "payload": {
+            "id": "net_cube_01",
+            "position": [
+                2,
+                0,
+                -5
+            ]
+        }
+    },
+    {
+        "jobType": "BUILD_SCENE",
+        "payload": {
+            "ambientLight": [
+                0.8,
+                0.2,
+                0.2
+            ],
+            "sceneId": "scene_net_test",
+            "skybox": "none"
+        }
+    },
+    {
+        "jobType": "SPAWN_ENTITIES",
+        "payload": {
+            "components": {
+                "collider": "box",
+                "mesh": "cube",
+                "script": "none"
+            },
+            "id": "net_cube_01",
+            "material": {
+                "color": [
+                    0,
+                    1,
+                    0
+                ],
+                "shader": "standard",
+                "texture": "none"
+            },
+            "transform": {
+                "position": [
+                    0,
+                    0,
+                    -5
+                ],
+                "rotation": [
+                    0,
+                    45,
+                    0
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "type": "object"
+        }
+    },
+    {
+        "jobType": "UPDATE",
+        "payload": {
+            "id": "net_cube_01",
+            "position": [
+                2,
+                0,
+                -5
+            ]
+        }
+    },
+    {
+        "jobType": "BUILD_SCENE",
+        "payload": {
+            "ambientLight": [
+                0.8,
+                0.2,
+                0.2
+            ],
+            "sceneId": "scene_net_test",
+            "skybox": "none"
+        }
+    }
+]
