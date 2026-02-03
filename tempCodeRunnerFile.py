@@ -3,7 +3,7 @@ import websockets
 import json
 
 async def rudra_server(websocket):
-    print(f"engine Engine connected!")
+    print(f"[Rudra] Engine connected!")
     
     try:
         # 1. LIFECYCLE
@@ -33,7 +33,7 @@ async def rudra_server(websocket):
         # 4. ACTION INJECTION (Day 1c Feature)
         # Instead of absolute UPDATE, we send a relative MOVE action
         await asyncio.sleep(1)
-        print("engine Sending ACTION: MOVE (Relative +2 Y)...")
+        print("[Rudra] Sending ACTION: MOVE (Relative +2 Y)...")
         await websocket.send(json.dumps({
             "command": "ACTION",
             "action": "MOVE",
@@ -45,7 +45,7 @@ async def rudra_server(websocket):
 
         # 5. ACTION INJECTION (Interact)
         await asyncio.sleep(1)
-        print("engine Sending ACTION: INTERACT...")
+        print("[Rudra] Sending ACTION: INTERACT...")
         await websocket.send(json.dumps({
             "command": "ACTION",
             "action": "INTERACT",
@@ -55,7 +55,7 @@ async def rudra_server(websocket):
         await asyncio.get_running_loop().create_future()
 
     except websockets.exceptions.ConnectionClosed:
-        print("engine Engine disconnected.")
+        print("[Rudra] Engine disconnected.")
 
 async def main():
     async with websockets.serve(rudra_server, "localhost", 8080):
