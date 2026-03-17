@@ -1,0 +1,28 @@
+{
+  "meta": {
+    "game_title": "BHIV Engine (Default)",
+    "version": "1.0"
+  },
+  "gameplay": {
+    "game_mode": "infinite_runner",
+    "movement_axis": "z",
+    "global_speed": 0.0,
+    "gravity": -9.8
+  },
+  "camera": {
+    "mode": "follow_third_person",
+    "offset": [0.0, 5.0, 10.0],
+    "look_at_offset": [0.0, 0.0, -10.0],
+    "fov": 60.0
+  },
+  "player": {
+    "start_pos": [0.0, 1.0, 0.0],
+    "mesh_id": "cube",
+    "abilities": {
+      "jump_force": 10.0,
+      "lane_speed": 10.0
+    }
+  },
+  "rules": [],
+  "entities": []
+}
